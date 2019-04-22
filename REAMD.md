@@ -21,4 +21,5 @@
 **Note:**
 
 These functions are designed to test whether an object suits the specifications
-suggested on [MDN](https://developer.mozilla.org), go to MDN for more details.
+suggested on [MDN](https://developer.mozilla.org) in sloppy mode, go to MDN for
+more details.
