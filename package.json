@@ -1,10 +1,11 @@
 {
   "name": "check-iterable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "tsc -p test & mocha"
+    "test": "tsc -p test & mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.6",
     "mocha": "^6.1.4",
+    "tslib": "^1.9.3",
     "typescript": "^3.4.4"
   }
 }
