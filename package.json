@@ -1,11 +1,15 @@
 {
   "name": "check-iterable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "tsc -p test & mocha --exit"
+    "prepublishOnly": "npm link @babel/core && mv index.js index.mjs && babel --presets @babel/env -o index.js index.mjs",
+    "postpublish": "mv index.mjs index.js",
+    "pretest": "tsc test/index.ts --module commonjs --target es2015 && npm run prepublishOnly",
+    "posttest": "npm run postpublish && rm test/index.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,17 +24,16 @@
     "AsyncIterator",
     "AsyncIterableIterator"
   ],
-  "author": "Ayon Lee <i@hyurl.com>",
+  "author": "A-yon Lee <i@hyurl.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hyurl/check-iterable/issues"
   },
   "homepage": "https://github.com/hyurl/check-iterable#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.12.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^11.13.17",
-    "mocha": "^6.1.4",
-    "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "mocha": "^6.1.4"
   }
 }

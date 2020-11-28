@@ -2,6 +2,20 @@
 
 **A toolbox to check if an object is iterable, an iterator or a generator, etc.**
 
+## Install
+
+### Node.js
+
+```sh
+npm i check-iterable
+```
+
+### Deno
+
+```ts
+import * as CheckIterable from "https://deno.land/x/check_iterable/index.js";
+```
+
 ## API
 
 - `isIterable(obj: any): boolean` Checks if the given object is an Iterable 
