@@ -4,6 +4,7 @@ if (!Symbol.asyncIterator) {
 
 /**
  * Checks if the given object is an Iterable (implemented `@@iterator`).
+ * @returns {obj is Iterable<any>}
  */
 export function isIterable(obj) {
     return obj !== null
@@ -13,6 +14,7 @@ export function isIterable(obj) {
 
 /**
  * Checks if the given object is an AsyncIterable (implemented `@@asyncIterator`).
+ * @returns {obj is AsyncIterable<any>}
  */
 export function isAsyncIterable(obj) {
     return obj !== null
@@ -22,6 +24,7 @@ export function isAsyncIterable(obj) {
 
 /**
  * Checks if the given object is an IteratorLike (implemented `next`).
+ * @returns {obj is { next: Function }}
  */
 export function isIteratorLike(obj) {
     // An iterable object has a 'next' method, however including a 'next' method
@@ -43,6 +46,7 @@ export function isIterableIterator(obj) {
 /**
  * Checks if the given object is an AsyncIterableIterator (implemented
  * both `@@asyncIterator` and `next`).
+ * @returns {obj is AsyncIterableIterator<any>}
  */
 export function isAsyncIterableIterator(obj) {
     return isIteratorLike(obj)
@@ -51,6 +55,7 @@ export function isAsyncIterableIterator(obj) {
 
 /**
  * Checks if the given object is a Generator.
+ * @returns {obj is Generator}
  */
 export function isGenerator(obj) {
     return isIterableIterator(obj)
@@ -59,6 +64,7 @@ export function isGenerator(obj) {
 
 /**
  * Checks if the given object is an AsyncGenerator.
+ * @returns {obj is AsyncGenerator}
  */
 export function isAsyncGenerator(obj) {
     return isAsyncIterableIterator(obj)
