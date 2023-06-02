@@ -1,6 +1,6 @@
 {
   "name": "check-iterable",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyurl/check-iterable.git"
+    "url": "git+https://github.com/ayonli/check-iterable.git"
   },
   "keywords": [
     "iterable",
@@ -24,12 +24,12 @@
     "AsyncIterator",
     "AsyncIterableIterator"
   ],
-  "author": "A-yon Lee <i@hyurl.com>",
+  "author": "A-yon Lee <the@ayon.li>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hyurl/check-iterable/issues"
+    "url": "https://github.com/ayonli/check-iterable/issues"
   },
-  "homepage": "https://github.com/hyurl/check-iterable#readme",
+  "homepage": "https://github.com/ayonli/check-iterable#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.12.7",
     "@types/mocha": "^5.2.7",
