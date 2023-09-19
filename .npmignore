@@ -4,3 +4,5 @@ test/
 *.tgz
 test.cjs
 test.mjs
+test.ts
+index.js
