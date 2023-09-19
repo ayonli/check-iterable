@@ -1,40 +1,43 @@
 {
-  "name": "check-iterable",
-  "version": "1.1.0",
-  "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "prepublishOnly": "npm link @babel/core && mv index.js index.mjs && babel --presets @babel/env -o index.js index.mjs",
-    "postpublish": "mv index.mjs index.js",
-    "pretest": "tsc test/index.ts --module commonjs --target es2015 && npm run prepublishOnly",
-    "posttest": "npm run postpublish && rm test/index.js",
-    "test": "mocha",
-    "test:bun": "bun run ./node_modules/mocha/bin/mocha test/index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ayonli/check-iterable.git"
-  },
-  "keywords": [
-    "iterable",
-    "iterator",
-    "generator",
-    "IterableIterator",
-    "AsyncIterable",
-    "AsyncIterator",
-    "AsyncIterableIterator"
-  ],
-  "author": "A-yon Lee <the@ayon.li>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ayonli/check-iterable/issues"
-  },
-  "homepage": "https://github.com/ayonli/check-iterable#readme",
-  "devDependencies": {
-    "@babel/preset-env": "^7.12.7",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^11.13.17",
-    "mocha": "^6.1.4"
-  }
+    "name": "check-iterable",
+    "version": "2.0.0",
+    "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
+    "main": "./index.cjs",
+    "module": "./index.mjs",
+    "types": "index.d.ts",
+    "exports": {
+        "require": "./index.cjs",
+        "import": "./index.mjs",
+        "types": "./index.d.ts"
+    },
+    "scripts": {
+        "test": "mocha test.cjs && mocha test.mjs",
+        "test:bun": "bun run ./node_modules/mocha/bin/mocha test.cjs && bun run ./node_modules/mocha/bin/mocha test.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ayonli/check-iterable.git"
+    },
+    "keywords": [
+        "iterable",
+        "iterator",
+        "generator",
+        "IterableIterator",
+        "AsyncIterable",
+        "AsyncIterator",
+        "AsyncIterableIterator"
+    ],
+    "author": "A-yon Lee <the@ayon.li>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ayonli/check-iterable/issues"
+    },
+    "homepage": "https://github.com/ayonli/check-iterable#readme",
+    "devDependencies": {
+        "@types/mocha": "^10.0.1",
+        "@types/node": "^20.6.2",
+        "mocha": "^10.2.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5"
+    }
 }

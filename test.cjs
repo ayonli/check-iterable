@@ -1,5 +1,5 @@
-import * as assert from "assert";
-import * as check from "..";
+const assert = require("assert");
+const check = require("./index.cjs");
 
 describe("isIterable", () => {
     it("should pass when invoking an ordinary generator function", () => {

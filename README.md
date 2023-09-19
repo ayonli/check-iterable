@@ -13,7 +13,7 @@ npm i check-iterable
 ### Deno
 
 ```ts
-import * as CheckIterable from "https://deno.land/x/check_iterable/index.js";
+import * as CheckIterable from "https://deno.land/x/check_iterable/index.mjs";
 ```
 
 ## API

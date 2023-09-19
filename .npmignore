@@ -1,4 +1,6 @@
 node_modules/
 test/
 .*
-index.mjs
+*.tgz
+test.cjs
+test.mjs
