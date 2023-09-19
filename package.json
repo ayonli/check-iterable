@@ -1,6 +1,6 @@
 {
     "name": "check-iterable",
-    "version": "2.0.0",
+    "version": "1.2.0",
     "description": "A toolbox to check if an object is iterable, an iterator or a generator, etc.",
     "main": "./index.cjs",
     "module": "./index.mjs",
@@ -12,7 +12,8 @@
     },
     "scripts": {
         "test": "mocha test.cjs && mocha test.mjs",
-        "test:bun": "bun run ./node_modules/mocha/bin/mocha test.cjs && bun run ./node_modules/mocha/bin/mocha test.mjs"
+        "test:bun": "bun run ./node_modules/mocha/bin/mocha test.cjs && bun run ./node_modules/mocha/bin/mocha test.mjs",
+        "test:deno": "deno run test.ts"
     },
     "repository": {
         "type": "git",
